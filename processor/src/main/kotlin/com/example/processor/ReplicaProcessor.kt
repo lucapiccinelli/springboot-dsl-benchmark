@@ -220,7 +220,6 @@ class ReplicaProcessor: AbstractProcessor() {
                 listOf(
                     createEntity(index),
                     createRepositories(index),
-                    createServices(index),
                     createControllers(index)
                 )
             }
@@ -281,11 +280,11 @@ class ReplicaProcessor: AbstractProcessor() {
         val type = TypeSpec
             .classBuilder(className)
             .primaryConstructor(FunSpec.constructorBuilder()
-                .addParameter("service", ClassName(packageFn(index,"nodsl"), "HelloService${index}"))
+                .addParameter("repo", ClassName(packageFn(index,"nodsl"), "HelloRepository${index}"))
                 .build())
             .addProperty(PropertySpec
-                .builder("service", ClassName(packageFn(index,"nodsl"), "HelloService${index}"))
-                .initializer("service")
+                .builder("repo", ClassName(packageFn(index,"nodsl"), "HelloRepository${index}"))
+                .initializer("repo")
                 .build())
             .addAnnotation(RestController::class)
             .addFunction(
@@ -297,7 +296,7 @@ class ReplicaProcessor: AbstractProcessor() {
                             .build())
                     .addStatement(
                         """
-                            return service.hello()
+                            return "hello $index"
                         """.trimIndent())
                     .build()
             )
