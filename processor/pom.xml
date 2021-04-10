@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>webflux-dsl</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>processor</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <autoservice.version>1.0-rc7</autoservice.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.auto.service</groupId>
+            <artifactId>auto-service</artifactId>
+            <version>${autoservice.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup</groupId>
+            <artifactId>kotlinpoet</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup</groupId>
+            <artifactId>kotlinpoet-metadata</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup</groupId>
+            <artifactId>kotlinpoet-metadata-specs</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>annotation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+
+        <plugins>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>kapt</id>
+                        <goals>
+                            <goal>kapt</goal>
+                        </goals>
+                        <configuration>
+                            <annotationProcessorPaths>
+                                <annotationProcessorPath>
+                                    <groupId>com.google.auto.service</groupId>
+                                    <artifactId>auto-service</artifactId>
+                                    <version>${autoservice.version}</version>
+                                </annotationProcessorPath>
+                            </annotationProcessorPaths>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
