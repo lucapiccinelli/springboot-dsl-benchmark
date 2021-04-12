@@ -7,7 +7,7 @@ import org.springframework.boot.runApplication
 @SpringBootApplication(scanBasePackages = ["com.example.app.nodsl"])
 class Application
 
-@HowManyControllers(2)
+@HowManyControllers(1000)
 fun main(args: Array<String>) {
     runApplication<Application>(*args)
 }
