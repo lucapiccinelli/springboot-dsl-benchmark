@@ -1,0 +1,31 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-04-12 08:25:50.443  INFO 25388 --- [           main] com.example.app.ApplicationKt            : Starting ApplicationKt v0.0.1-SNAPSHOT using Java 11.0.4 on NCOS000028 with PID 25388 (D:\workspace\tests\webflux-dsl-benchmark\nodsl\target\nodsl-0.0.1-SNAPSHOT.jar started by luca.piccinelli in D:\workspace\tests\webflux-dsl-benchmark)
+2021-04-12 08:25:50.453  INFO 25388 --- [           main] com.example.app.ApplicationKt            : No active profile set, falling back to default profiles: default
+2021-04-12 08:26:00.949  INFO 25388 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-12 08:26:23.169  INFO 25388 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22185 ms. Found 1000 JPA repository interfaces.
+2021-04-12 08:26:25.798  INFO 25388 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-12 08:26:25.948  INFO 25388 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 35130 ms
+2021-04-12 08:26:27.027  INFO 25388 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-12 08:26:27.126  INFO 25388 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-12 08:26:27.345  INFO 25388 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-12 08:26:27.653  INFO 25388 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-12 08:26:28.086  INFO 25388 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-12 08:26:28.122  INFO 25388 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-12 08:26:30.009  INFO 25388 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-12 08:26:30.026  INFO 25388 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-12 08:26:44.276  WARN 25388 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-12 08:26:44.634  INFO 25388 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-12 08:26:45.365  INFO 25388 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-12 08:26:45.386  INFO 25388 --- [           main] com.example.app.ApplicationKt            : Started ApplicationKt in 57.31 seconds (JVM running for 59.756)
+2021-04-12 08:26:46.280  INFO 25388 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-12 08:26:47.274  INFO 25388 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-12 08:26:47.278  INFO 25388 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-12 08:26:47.286  INFO 25388 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
