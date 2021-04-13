@@ -81,9 +81,6 @@ class ReplicaProcessor: AbstractProcessor() {
                 return router {
                     "hello${index}".nest {
                         GET("", handler::hello)
-                        accept(APPLICATION_JSON).nest {
-                            POST("", handler::save)
-                        }
                     }
                 }
             """.trimIndent())
